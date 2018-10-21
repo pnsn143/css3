@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS 3 Transitions</title>
+    <style>
+        body{
+            font-family: "comic sans ms", sans-serif;
+        }
+        div{
+            height: 100px;
+            width: 100px;
+            background-color: red;
+            border-radius: 10px;
+        }
+        .t_width, .t_height{
+            transition: width 2s;
+        }
+        .t_width:hover, .t_height:hover{
+            width: 200px;
+        }
+        .t_both{
+            transition: all 2s;
+        }
+        .t_both:hover{
+            width: 200px;
+            height: 200px;
+        }
+        .t_rotate{
+            transition: all 2s;
+        }
+        .t_rotate:hover{
+            width: 200px;
+            transform: rotate(180deg);
+        }
+        .t_timing{
+            margin-bottom: 100px;
+            transition: all 2s;
+            transition-timing-function: ease-in-out;
+            transition-delay: 2s;
+        }
+        .t_timing:hover{
+            width: 200px;
+        }
+
+        .zoom{
+            width: 500px;
+            height: auto;
+            background-color: white;
+            overflow: hidden;
+        }
+        .zoom img{
+            max-width: 100%;
+            max-height: 100%;
+            transition: all 1s;
+
+        }
+        .zoom:hover img{
+            transform: scale(1.2,1.2);
+            cursor: pointer;
+        }
+
+
+    </style>
+
+</head>
+<body>
+
+   <h3>
+       transation width
+   </h3>
+<div class="t_width"></div>
+
+<h3>trasition height</h3>
+<div class="t_height"></div>
+
+<h3> transition both</h3>
+<div class="t_both"></div>
+
+<h3>trasition rotate</h3>
+<div class="t_rotate"></div>
+
+<h3>trasition timing</h3>
+<div class="t_timing"></div>
+
+<h3>zoom effect</h3>
+<div class="zoom">
+    <img src="img/gallery2.jpeg">
+</div>
+</body>
+</html>
